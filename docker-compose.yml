@@ -1,18 +1,27 @@
 version: '3.1'
 services:
+
+  postgresqldb:
+    image: postgres
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - target-data:/var/lib/postgresql/data
+
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=tododb
+
   app:
     container_name: springboot-postgresql
-    image: rolandsall24/todo-app:1.0.3
+    image: rolandsall24/todo-app:1.0.4
     build: ./
     ports:
       - "8080:8080"
     depends_on:
       - postgresqldb
-  postgresqldb:
-    image: postgres
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=tododb
+
+volumes:
+  target-data:
