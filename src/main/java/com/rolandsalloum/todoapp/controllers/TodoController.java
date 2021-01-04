@@ -55,7 +55,7 @@ public class TodoController {
     }
 
     @PutMapping("/{todoId}")
-    public ResponseEntity deleteTodoById(@PathVariable("todoId") UUID todoId, TodoApiUpdateRequest request){
+    public ResponseEntity deleteTodoById(@PathVariable("todoId") UUID todoId, @RequestBody TodoApiUpdateRequest request){
         try {
             todoService.updateTodoById(todoId,buildTodoFromUpdateRequest(request));
             return  ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
@@ -66,7 +66,7 @@ public class TodoController {
 
 
     @PostMapping
-    public ResponseEntity createTodo(TodoApiRequest request){
+    public ResponseEntity createTodo(@RequestBody TodoApiRequest request){
         try {
             Todo todo = todoService.createTodo(buildTodoFromRequest(request));
             TodoApiResponse response = buildSingleTodoResponse(todo);
