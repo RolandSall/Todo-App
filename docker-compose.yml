@@ -2,7 +2,7 @@ version: '3.1'
 services:
   app:
     container_name: springboot-postgresql
-    image: rolandsall24/todo-app:1.0.2
+    image: rolandsall24/todo-app:1.0.3
     build: ./
     ports:
       - "8080:8080"
