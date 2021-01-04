@@ -14,7 +14,8 @@ public class TodoRepositoryDAO implements ITodoRepositoryDAO {
     public List<Todo> getAllTodos() {
         return Arrays.asList(
                 new Todo().builder().todoId(UUID.randomUUID()).description("Desc1").title("title1").build(),
-                new Todo().builder().todoId(UUID.randomUUID()).description("Desc2").title("title2").build()
+                new Todo().builder().todoId(UUID.randomUUID()).description("Desc2").title("title2").build(),
+                new Todo().builder().todoId(UUID.randomUUID()).description("Desc3").title("title3").build()
         );
     }
 }
