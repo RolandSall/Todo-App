@@ -55,9 +55,9 @@ public class TodoController {
     }
 
     @PutMapping("/{todoId}")
-    public ResponseEntity deleteTodoById(@PathVariable("todoId") UUID todoId, TodoApiRequest request){
+    public ResponseEntity deleteTodoById(@PathVariable("todoId") UUID todoId, TodoApiUpdateRequest request){
         try {
-            todoService.updateTodoById(todoId,buildTodoFromRequest(request));
+            todoService.updateTodoById(todoId,buildTodoFromUpdateRequest(request));
             return  ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
@@ -80,6 +80,15 @@ public class TodoController {
         return new Todo().builder()
                 .title(request.getTitle())
                 .description(request.getDescription())
+                .isCompleted(false)
+                .build();
+    }
+
+    private Todo buildTodoFromUpdateRequest(TodoApiUpdateRequest request) {
+        return new Todo().builder()
+                .title(request.getTitle())
+                .description(request.getDescription())
+                .isCompleted(request.isCompleted())
                 .build();
     }
 
@@ -97,6 +106,7 @@ public class TodoController {
                 .todoId(todo.getTodoId())
                 .title(todo.getTitle())
                 .description(todo.getDescription())
+                .isCompleted(todo.isCompleted())
                 .build();
     }
 }

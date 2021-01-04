@@ -18,4 +18,5 @@ public class Todo {
     private UUID todoId;
     private String title;
     private String description;
+    private boolean isCompleted;
 }
