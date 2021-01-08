@@ -81,6 +81,7 @@ public class TodoController {
         return new Todo().builder()
                 .title(request.getTitle())
                 .description(request.getDescription())
+                .importance(request.getImportance())
                 .isCompleted(false)
                 .build();
     }
@@ -90,6 +91,7 @@ public class TodoController {
                 .title(request.getTitle())
                 .description(request.getDescription())
                 .isCompleted(request.isCompleted())
+                .importance(request.getImportance())
                 .build();
     }
 
@@ -108,6 +110,7 @@ public class TodoController {
                 .title(todo.getTitle())
                 .description(todo.getDescription())
                 .isCompleted(todo.isCompleted())
+                .importance(todo.getImportance())
                 .build();
     }
 }

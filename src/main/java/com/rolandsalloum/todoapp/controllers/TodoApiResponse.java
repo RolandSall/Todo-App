@@ -15,4 +15,5 @@ public class TodoApiResponse {
     private String title;
     private String description;
     private boolean isCompleted;
+    private String  importance;
 }

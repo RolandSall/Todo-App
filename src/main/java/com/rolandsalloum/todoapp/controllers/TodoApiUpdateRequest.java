@@ -11,4 +11,5 @@ public class TodoApiUpdateRequest {
     private String title;
     private String description;
     private boolean isCompleted;
+    private String  importance;
 }
