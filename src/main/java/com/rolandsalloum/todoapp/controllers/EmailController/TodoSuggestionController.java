@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/send")
+@CrossOrigin
 public class TodoSuggestionController {
 
     private EmailService emailService;
