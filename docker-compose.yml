@@ -14,7 +14,7 @@ services:
 
   app:
     container_name: springboot-postgresql
-    image: rolandsall24/todo-app:1.1.0-env-local
+    image: rolandsall24/todo-app:1.2.0-env-local
     build: ./
     ports:
       - "8080:8080"

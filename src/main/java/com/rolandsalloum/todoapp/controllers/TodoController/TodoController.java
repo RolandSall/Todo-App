@@ -1,4 +1,4 @@
-package com.rolandsalloum.todoapp.controllers;
+package com.rolandsalloum.todoapp.controllers.TodoController;
 
 import com.rolandsalloum.todoapp.models.Todo;
 import com.rolandsalloum.todoapp.services.todoService.TodoService;

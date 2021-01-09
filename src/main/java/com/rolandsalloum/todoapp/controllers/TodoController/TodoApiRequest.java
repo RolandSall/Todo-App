@@ -1,15 +1,16 @@
-package com.rolandsalloum.todoapp.controllers;
+package com.rolandsalloum.todoapp.controllers.TodoController;
+
 import lombok.*;
 
+import java.util.UUID;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
-public class TodoApiUpdateRequest {
+public class TodoApiRequest {
     private String title;
     private String description;
-    private boolean isCompleted;
     private String  importance;
 }
