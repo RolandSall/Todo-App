@@ -4,5 +4,5 @@ import com.rolandsalloum.todoapp.models.TodoSuggestion;
 
 public interface IEmailService {
 
-     void sendMail(TodoSuggestion todoSuggestion);
+     TodoSuggestion sendMail(TodoSuggestion todoSuggestion);
 }

@@ -1,8 +1,6 @@
 package com.rolandsalloum.todoapp.controllers.EmailController;
-
+import com.sun.istack.NotNull;
 import lombok.*;
-
-import javax.persistence.Entity;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -10,8 +8,12 @@ import javax.persistence.Entity;
 @Setter
 @Builder
 public class TodoSuggestionRequest {
+    @NotNull
     private String email;
+    @NotNull
     private String fullName;
+    @NotNull
     private String title;
+    @NotNull
     private String description;
 }
