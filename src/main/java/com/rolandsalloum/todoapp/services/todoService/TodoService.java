@@ -1,7 +1,7 @@
 package com.rolandsalloum.todoapp.services.todoService;
 
 import com.rolandsalloum.todoapp.models.Todo;
-import com.rolandsalloum.todoapp.repos.ITodoRepositoryDAO;
+import com.rolandsalloum.todoapp.repos.todoRepo.ITodoRepositoryDAO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

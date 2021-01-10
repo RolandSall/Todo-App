@@ -28,7 +28,7 @@ public class EmailService implements IEmailService{
     public TodoSuggestion sendMail(TodoSuggestion todoSuggestion) {
         configureEmailProperties();
         sendEmail(todoSuggestion);
-        todoSuggestion.setTodoId(UUID.randomUUID());
+        todoSuggestion.setSuggestedTodoId(UUID.randomUUID());
         return todoSuggestion;
     }
 
