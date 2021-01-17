@@ -105,7 +105,7 @@ public class TodoSuggestionController {
                 .suggestedTodoId(todoSuggestion.getSuggestedTodoId())
                 .description(todoSuggestion.getDescription())
                 .email(todoSuggestion.getEmail())
-                .fullName(todoSuggestion.getEmail())
+                .fullName(todoSuggestion.getFullName())
                 .title(todoSuggestion.getTitle())
                 .build();
     }
